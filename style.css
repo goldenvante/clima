@@ -1,0 +1,381 @@
+
+:root {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #183047;
+    background: #eef5fb;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    min-width: 0;
+    overflow-x: clip;
+}
+
+body {
+    width: 100%;
+    min-width: 0;
+    margin: 0;
+    padding: 32px 16px;
+    overflow-x: clip;
+    background:
+        radial-gradient(ellipse at top left, #d6efff, transparent 45%),
+        #eef5fb;
+}
+
+button,
+input,
+select {
+    font: inherit;
+}
+
+.contenedor {
+    width: 100%;
+    max-width: 1050px;
+    min-width: 0;
+    margin: 0 auto;
+    padding: clamp(16px, 4vw, 36px);
+    background: #ffffff;
+    border: 1px solid #e0eaf2;
+    border-radius: 24px;
+    box-shadow: 0 18px 55px #24456312;
+}
+
+.encabezado {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.encabezado h1 {
+    margin: 8px 0;
+    font-size: clamp(30px, 5vw, 46px);
+    color: #143b60;
+}
+
+.encabezado > p:last-child {
+    color: #64788b;
+    line-height: 1.6;
+}
+
+.etiqueta {
+    color: #397eaf;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.6px;
+}
+
+.buscador {
+    width: 100%;
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.buscador > label {
+    display: block;
+    margin-bottom: 9px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.fila-busqueda {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
+.fila-busqueda input {
+    flex: 1 1 0;
+    width: 0;
+    min-width: 0;
+    padding: 13px 14px;
+    border: 1px solid #cbd9e5;
+    border-radius: 11px;
+    outline: none;
+}
+
+.fila-busqueda input:focus,
+select:focus {
+    border-color: #287db8;
+    outline: 2px solid #287db822;
+}
+
+button {
+    padding: 12px 20px;
+    border: 0;
+    border-radius: 11px;
+    color: white;
+    background: #1769aa;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #105486;
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: wait;
+}
+
+.opciones {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 18px auto;
+}
+
+.opciones label {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.opciones select {
+    max-width: 100%;
+    padding: 10px;
+    border: 1px solid #cbd9e5;
+    border-radius: 10px;
+    background: white;
+    color: #183047;
+}
+
+#estado {
+    min-height: 22px;
+    margin: 18px 0;
+    color: #62778a;
+    text-align: center;
+    font-size: 14px;
+    overflow-wrap: anywhere;
+}
+
+.clima-actual {
+    width: 100%;
+    min-width: 0;
+    padding: clamp(18px, 4vw, 32px);
+    border-radius: 20px;
+    background: linear-gradient(140deg, #e5f4ff, #f3f7ff);
+    text-align: center;
+}
+
+.clima-actual h2 {
+    margin: 8px 0;
+    font-size: clamp(22px, 4vw, 30px);
+    overflow-wrap: anywhere;
+}
+
+.descripcion {
+    color: #526c80;
+}
+
+.temperatura {
+    margin: 12px 0 24px;
+    color: #14578d;
+    font-size: clamp(48px, 10vw, 76px);
+    font-weight: 800;
+    letter-spacing: -2px;
+}
+
+.detalles {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.detalle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 9px;
+    min-width: 0;
+    padding: 14px 8px;
+    border: 1px solid #dceaf5;
+    border-radius: 12px;
+    background: #ffffffb8;
+}
+
+.detalle span {
+    color: #637a8d;
+    font-size: 12px;
+    overflow-wrap: anywhere;
+}
+
+.detalle strong {
+    font-size: clamp(13px, 2.5vw, 17px);
+    overflow-wrap: anywhere;
+}
+
+.seccion {
+    width: 100%;
+    min-width: 0;
+    margin-top: 38px;
+}
+
+.titulo-seccion {
+    margin-bottom: 18px;
+}
+
+.titulo-seccion .etiqueta {
+    margin-bottom: 7px;
+}
+
+.titulo-seccion h2 {
+    margin: 0;
+    font-size: clamp(21px, 4vw, 27px);
+    color: #183b59;
+    overflow-wrap: anywhere;
+}
+
+.rejilla {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+    width: 100%;
+    min-width: 0;
+}
+
+.tarjeta-pronostico {
+    min-width: 0;
+    padding: 16px 12px;
+    border: 1px solid #e0eaf3;
+    border-radius: 15px;
+    background: #f7faff;
+    text-align: center;
+    overflow-wrap: anywhere;
+}
+
+.tarjeta-pronostico .hora {
+    color: #526f86;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.tarjeta-pronostico .icono-clima {
+    margin: 12px 0;
+    font-size: 27px;
+}
+
+.tarjeta-pronostico .temp {
+    margin: 8px 0;
+    color: #174e7a;
+    font-size: 21px;
+    font-weight: 800;
+}
+
+.tarjeta-pronostico .detalle-menor {
+    margin: 8px 0 0;
+    color: #63798b;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.semana {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.grafico-contenedor {
+    position: relative;
+    width: 100%;
+    min-width: 0;
+    height: 300px;
+    padding: 14px;
+    border: 1px solid #e0eaf3;
+    border-radius: 16px;
+    background: #ffffff;
+}
+
+.grafico-contenedor canvas {
+    display: block;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+footer {
+    margin-top: 36px;
+    padding-top: 18px;
+    border-top: 1px solid #e5edf4;
+    text-align: center;
+    color: #718397;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+@media (max-width: 760px) {
+    body {
+        padding: 16px 10px;
+    }
+
+    .contenedor {
+        padding: 22px 16px;
+        border-radius: 18px;
+    }
+
+    .rejilla {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 9px;
+    }
+
+    .semana {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .tarjeta-pronostico {
+        padding: 13px 8px;
+    }
+
+    .grafico-contenedor {
+        height: 260px;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 420px) {
+    body {
+        padding: 8px 5px;
+    }
+
+    .contenedor {
+        padding: 18px 11px;
+    }
+
+    .fila-busqueda {
+        flex-direction: column;
+    }
+
+    .fila-busqueda input,
+    .fila-busqueda button {
+        width: 100%;
+    }
+
+    .detalles {
+        grid-template-columns: 1fr;
+    }
+
+    .detalle {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px;
+        text-align: left;
+    }
+
+    .rejilla {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .semana {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .temperatura {
+        letter-spacing: -1px;
+    }
+}

@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1769aa">
+    <title>Clima | Mi ciudad</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="clima.js" defer></script>
+</head>
+
+<body>
+    <main class="contenedor">
+        <header class="encabezado">
+            <p class="etiqueta">EL TIEMPO EN TU CIUDAD</p>
+            <h1>Mi clima</h1>
+            <p>Consulta el clima actual y los próximos días.</p>
+        </header>
+
+        <form id="formulario-clima" class="buscador">
+            <label for="ciudad">Busca una ciudad</label>
+            <div class="fila-busqueda">
+                <input
+                    type="text"
+                    id="ciudad"
+                    placeholder="Ej. Querétaro"
+                    value="Ciudad de México"
+                    required
+                >
+                <button type="submit" id="boton-buscar">
+                    Buscar
+                </button>
+            </div>
+        </form>
+
+        <div class="opciones">
+            <label for="unidad">Temperatura:</label>
+            <select id="unidad">
+                <option value="celsius">Celsius (°C)</option>
+                <option value="fahrenheit">Fahrenheit (°F)</option>
+            </select>
+        </div>
+
+        <p id="estado" role="status" aria-live="polite">
+            Cargando el clima...
+        </p>
+
+        <section id="resultado" class="clima-actual">
+            <p class="etiqueta">CLIMA ACTUAL</p>
+            <h2 id="ubicacion">Buscando ciudad...</h2>
+            <p id="descripcion-actual" class="descripcion">--</p>
+            <p id="temperatura" class="temperatura">-- °C</p>
+
+            <div class="detalles">
+                <div class="detalle">
+                    <span>Sensación térmica</span>
+                    <strong id="sensacion">--</strong>
+                </div>
+
+                <div class="detalle">
+                    <span>Humedad</span>
+                    <strong id="humedad">--</strong>
+                </div>
+
+                <div class="detalle">
+                    <span>Viento</span>
+                    <strong id="viento">--</strong>
+                </div>
+            </div>
+        </section>
+
+        <section class="seccion">
+            <div class="titulo-seccion">
+                <div>
+                    <p class="etiqueta">LAS PRÓXIMAS HORAS</p>
+                    <h2>Pronóstico por hora</h2>
+                </div>
+            </div>
+
+            <div id="por-hora" class="rejilla horas">
+                <p>Esperando datos...</p>
+            </div>
+        </section>
+
+        <section class="seccion">
+            <div class="titulo-seccion">
+                <div>
+                    <p class="etiqueta">TENDENCIA DEL DÍA</p>
+                    <h2>Temperatura por hora</h2>
+                </div>
+            </div>
+
+            <div class="grafico-contenedor">
+                <canvas
+                    id="grafico-temperatura"
+                    role="img"
+                    aria-label="Gráfico de temperatura para las próximas 24 horas"
+                ></canvas>
+            </div>
+        </section>
+
+        <section class="seccion">
+            <div class="titulo-seccion">
+                <div>
+                    <p class="etiqueta">PLANEA TU SEMANA</p>
+                    <h2>Pronóstico de 7 días</h2>
+                </div>
+            </div>
+
+            <div id="por-semana" class="rejilla semana">
+                <p>Esperando datos...</p>
+            </div>
+        </section>
+
+        <footer>
+            <p>Datos meteorológicos proporcionados por Open-Meteo.</p>
+        </footer>
+    </main>
+</body>
+</html>
